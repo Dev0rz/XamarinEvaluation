@@ -32,8 +32,6 @@ namespace App.Prototype
 		public AndroidApp ()
 		{
 		}
-
-
 	}
 }
 
