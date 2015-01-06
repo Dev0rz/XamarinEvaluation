@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/phone_padding"
+    android:paddingRight="@dimen/phone_padding"
+    android:paddingTop="@dimen/phone_padding"
+    android:paddingBottom="@dimen/phone_padding">
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/phone_padding_title"
+        android:layout_marginBottom="@dimen/phone_padding_title"
+        android:text="@string/title_login_screen"
+        android:textSize="@dimen/phone_text_size_title"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/editTextUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/phone_text_size_widget"
+        android:hint="@string/content_username" />
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/phone_text_size_widget"
+        android:hint="@string/content_password" />
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/phone_padding_button"
+        android:layout_marginBottom="@dimen/phone_padding_button"
+        android:text="@string/label_login_button"
+        android:textSize="@dimen/phone_text_size_widget" />
+</LinearLayout>

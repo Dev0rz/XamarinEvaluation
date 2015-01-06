@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/phone_padding"
+    android:paddingRight="@dimen/phone_padding"
+    android:paddingTop="@dimen/phone_padding"
+    android:paddingBottom="@dimen/phone_padding">
+    <TextView
+        android:id="@+id/textViewLotLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/phone_padding"
+        android:text="@string/label_lot_number"
+        android:textSize="@dimen/phone_text_size_label"
+        android:gravity="left" />
+    <EditText
+        android:id="@+id/editTextLotNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/phone_text_size_widget"
+        android:hint="@string/content_lot_number" />
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/phone_padding_button"
+        android:layout_marginBottom="@dimen/phone_padding_button"
+        android:text="@string/label_search_button"
+        android:textSize="@dimen/phone_text_size_widget" />
+</LinearLayout>

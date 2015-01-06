@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="@dimen/phone_padding"
+    android:paddingRight="@dimen/phone_padding"
+    android:paddingTop="@dimen/phone_padding"
+    android:paddingBottom="@dimen/phone_padding">
+    <TextView
+        android:id="@+id/textViewFacility"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="OSFE1"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewProductionLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="FOL"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewOperation"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="0000"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="X0000X__00"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewOperator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="XX_0000"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewArrivalDate"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="00.00.0000"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewArrivalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="00:00"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewProcessingTime"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="00:00"
+        android:textSize="@dimen/phone_text_size_list_item" />
+</LinearLayout>

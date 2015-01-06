@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d7eba8b5-fb72-4a00-88fc-177e70bc1c6d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>false</GenerateTaskBasedAsynchronousMethod>
+    <GenerateEventBasedAsynchronousMethods>false</GenerateEventBasedAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:59166/MockService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MockService.xsd" MetadataType="Schema" ID="1b0642b0-6969-443d-89fe-58633ab6ff7f" SourceId="1" SourceUrl="http://localhost:59166/MockService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MockService0.xsd" MetadataType="Schema" ID="5c8ce7df-f0de-4d21-be90-ea9c6cab3cc4" SourceId="1" SourceUrl="http://localhost:59166/MockService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MockService.wsdl" MetadataType="Wsdl" ID="a56beab7-c404-411e-8745-998a62ce483f" SourceId="1" SourceUrl="http://localhost:59166/MockService.svc?wsdl" />
+    <MetadataFile FileName="MockService.disco" MetadataType="Disco" ID="b4049b93-f78b-4625-98b2-05a5c0a6bb32" SourceId="1" SourceUrl="http://localhost:59166/MockService.svc?disco" />
+    <MetadataFile FileName="MockService1.xsd" MetadataType="Schema" ID="12bb941b-2ed8-48aa-bb8f-4dd6525b6557" SourceId="1" SourceUrl="http://localhost:59166/MockService.svc?xsd=xsd1" />
+  </Metadata>
+</ReferenceGroup>

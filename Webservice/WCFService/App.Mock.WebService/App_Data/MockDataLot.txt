@@ -1,0 +1,3 @@
+Oper;Process Nr;Process;Equipment;Specification;Oper. Desc.;Hold Category;Comment;Route;Planed Hold;Hold Name;Hold Note;Hold Reason;Hold Release;Operator;Color
+1014;07301G001_A;GaN/InGaN STARTEN;;Los Starten;Start FOL;;;H9051 C1_05;Indertiminate;;;;;OPERLZ;Gray
+0000;Text;Text;Text;Text;Text;;;Text;Text;;;;;Text;Green
