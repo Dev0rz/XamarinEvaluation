@@ -5,22 +5,36 @@ namespace RouteCard
 {
 	public abstract class Application
 	{
-		public static Application App = null;
+		protected ISimpleStorage storage = null;
+		protected AccountManager AccountMgr = null;
+		protected RouteManager RouteMgr = null;
 
-		public AccountManager AccountMgr = null;
-		public RouteManager RouteMgr = null;
-
-		public Application ()
+		public ISimpleStorage Storage
 		{
-			App = this;
-
-			AccountMgr = new AccountManager ();
-			RouteMgr = new RouteManager ();
+			get { return storage; }
+			set { storage = value; }
 		}
 
-		public bool Authorize (String username, String password)
+		public AccountManager GetAccountManager()
 		{
-			return AccountMgr.Authorize (username, password);
+			if (storage == null) {
+				return null;
+			}
+
+			if (AccountMgr == null) {
+				AccountMgr = new AccountManager (storage);
+			}
+
+			return AccountMgr;
+		}
+
+		public RouteManager GetRouteManager()
+		{
+			if (RouteMgr == null) {
+				RouteMgr = new RouteManager ();
+			}
+
+			return RouteMgr;
 		}
 	}
 }

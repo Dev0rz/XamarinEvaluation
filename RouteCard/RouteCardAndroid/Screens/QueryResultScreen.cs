@@ -15,7 +15,7 @@ using RouteCardAndroid;
 
 namespace RouteCardAndroid.Screens
 {
-	[Activity (Label = "Route Card Result", Icon="@drawable/icon")]			
+	[Activity (Label = "Route Card Result", Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
 	public class QueryResultScreen : Activity
 	{
 		ListView queryResultListView;

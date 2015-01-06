@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="SimpleStorage.Droid">
+      <HintPath>..\Bin\SimpleStorage.Droid.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -53,6 +56,7 @@
     <Compile Include="Adapters\ResultAdapter.cs" />
     <Compile Include="Screens\LoginScreen.cs" />
     <Compile Include="AndroidApp.cs" />
+    <Compile Include="SimpleStorageAndroid.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

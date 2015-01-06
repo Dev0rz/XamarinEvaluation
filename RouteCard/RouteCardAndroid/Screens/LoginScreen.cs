@@ -12,22 +12,19 @@ using Android.Widget;
 
 using RouteCard.Core;
 using RouteCardAndroid;
+using RouteCard;
 
 namespace RouteCardAndroid.Screens
 {
-	[Activity (Label = "Route Card", MainLauncher = true, Icon="@drawable/icon")]			
+	[Activity (Label = "Route Card", Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
 	public class LoginScreen : Activity
 	{
 		EditText usernameEditText;
 		EditText passwordEditText;
 		Button loginButton;
 
-		public static AndroidApp App = null;
-
 		protected override void OnCreate(Bundle bundle)
 		{
-			App = new AndroidApp ();
-
 			base.OnCreate(bundle);
 
 			// set layout
@@ -44,16 +41,24 @@ namespace RouteCardAndroid.Screens
 				// User credentials
 				String username = usernameEditText.Text;
 				String password = passwordEditText.Text;
+				bool IsAuthorized = false;
 
-				bool IsAuthorized = App.Authorize(username, password);
+				try {
+					IsAuthorized = AndroidApp.App.GetAccountManager().Authorize(username, password);
+				} catch (AuthorizationException ex) {
+					Toast.MakeText (this, ex.Message, ToastLength.Long).Show();
+					return;
+				}
 
 				// if user is authorized
 				if (IsAuthorized) {
-					// create intent
-					Intent queryResultIntent = new Intent (this, typeof(QueryScreen));
+//					// create intent
+//					Intent queryResultIntent = new Intent (this, typeof(QueryScreen));
+//
+//					// start activity
+//					StartActivity (queryResultIntent);
 
-					// start activity
-					StartActivity (queryResultIntent);
+					Finish();
 				}
 				else {
 					// show toast

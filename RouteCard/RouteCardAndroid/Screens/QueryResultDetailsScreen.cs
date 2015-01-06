@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace RouteCardAndroid.Screens
 {
-	[Activity (Label = "QueryResultDetails", Icon="@drawable/icon")]			
+	[Activity (Label = "QueryResultDetails", Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
 	public class QueryResultDetailsScreen : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

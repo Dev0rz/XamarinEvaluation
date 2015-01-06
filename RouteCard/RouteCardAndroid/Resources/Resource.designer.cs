@@ -27,6 +27,7 @@ namespace RouteCardAndroid
 		public static void UpdateIdValues()
 		{
 			global::RouteCard.Resource.String.library_name = global::RouteCardAndroid.Resource.String.library_name;
+			global::PerpetualMobile.Storage.Resource.String.library_name = global::RouteCardAndroid.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -211,8 +212,8 @@ namespace RouteCardAndroid
 			// aapt resource value: 0x7f040001
 			public const int app_name = 2130968577;
 			
-			// aapt resource value: 0x7f040008
-			public const int content_lot_number = 2130968584;
+			// aapt resource value: 0x7f040009
+			public const int content_lot_number = 2130968585;
 			
 			// aapt resource value: 0x7f040004
 			public const int content_password = 2130968580;
@@ -223,11 +224,11 @@ namespace RouteCardAndroid
 			// aapt resource value: 0x7f040005
 			public const int label_login_button = 2130968581;
 			
-			// aapt resource value: 0x7f040007
-			public const int label_lot_number = 2130968583;
+			// aapt resource value: 0x7f040008
+			public const int label_lot_number = 2130968584;
 			
-			// aapt resource value: 0x7f040009
-			public const int label_search_button = 2130968585;
+			// aapt resource value: 0x7f04000a
+			public const int label_search_button = 2130968586;
 			
 			// aapt resource value: 0x7f040000
 			public const int library_name = 2130968576;
@@ -235,11 +236,14 @@ namespace RouteCardAndroid
 			// aapt resource value: 0x7f040002
 			public const int title_login_screen = 2130968578;
 			
+			// aapt resource value: 0x7f040007
+			public const int toast_login_error = 2130968583;
+			
 			// aapt resource value: 0x7f040006
 			public const int toast_login_invalid = 2130968582;
 			
-			// aapt resource value: 0x7f04000a
-			public const int toast_lot_not_found = 2130968586;
+			// aapt resource value: 0x7f04000b
+			public const int toast_lot_not_found = 2130968587;
 			
 			static String()
 			{

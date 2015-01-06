@@ -7,6 +7,7 @@
 	<string name="content_password">Insert Password</string>
 	<string name="label_login_button">Login</string>
 	<string name="toast_login_invalid">Invalid username or password!</string>
+	<string name="toast_login_error">Client server communication failed!</string>
 
 	<string name="label_lot_number">Lot Number:</string>
 	<string name="content_lot_number">e.g. B124506R</string>

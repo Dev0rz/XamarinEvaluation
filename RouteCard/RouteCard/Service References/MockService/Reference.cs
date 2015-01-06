@@ -8,25 +8,25 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RouteCard.localhost {
+namespace RouteCard.MockService {
     
 }
 
 
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-[System.ServiceModel.ServiceContractAttribute(Namespace="RouteCard.localhost", ConfigurationName="IMockService")]
+[System.ServiceModel.ServiceContractAttribute(Namespace="RouteCard.MockService", ConfigurationName="IMockService")]
 public interface IMockService {
     
-    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "GetLotRequest" nicht mit dem Standardwert (RouteCard.localhost) übereinstimmt.
-    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMockService/GetLot", ReplyAction="http://tempuri.org/IMockService/GetLotResponse")]
-    GetLotResponse GetLot(GetLotRequest request);
+    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "GetRouteOperationsRequest" nicht mit dem Standardwert (RouteCard.MockService) übereinstimmt.
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMockService/GetRouteOperations", ReplyAction="http://tempuri.org/IMockService/GetRouteOperationsResponse")]
+    GetRouteOperationsResponse GetRouteOperations(GetRouteOperationsRequest request);
     
-    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IMockService/GetLot", ReplyAction="http://tempuri.org/IMockService/GetLotResponse")]
-    System.IAsyncResult BeginGetLot(GetLotRequest request, System.AsyncCallback callback, object asyncState);
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IMockService/GetRouteOperations", ReplyAction="http://tempuri.org/IMockService/GetRouteOperationsResponse")]
+    System.IAsyncResult BeginGetRouteOperations(GetRouteOperationsRequest request, System.AsyncCallback callback, object asyncState);
     
-    GetLotResponse EndGetLot(System.IAsyncResult result);
+    GetRouteOperationsResponse EndGetRouteOperations(System.IAsyncResult result);
     
-    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "IsValidUserRequest" nicht mit dem Standardwert (RouteCard.localhost) übereinstimmt.
+    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "IsValidUserRequest" nicht mit dem Standardwert (RouteCard.MockService) übereinstimmt.
     [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMockService/IsValidUser", ReplyAction="http://tempuri.org/IMockService/IsValidUserResponse")]
     IsValidUserResponse IsValidUser(IsValidUserRequest request);
     
@@ -39,16 +39,16 @@ public interface IMockService {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-[System.ServiceModel.MessageContractAttribute(WrapperName="GetLot", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-public partial class GetLotRequest {
+[System.ServiceModel.MessageContractAttribute(WrapperName="GetRouteOperations", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class GetRouteOperationsRequest {
     
     [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
     public string lotNumber;
     
-    public GetLotRequest() {
+    public GetRouteOperationsRequest() {
     }
     
-    public GetLotRequest(string lotNumber) {
+    public GetRouteOperationsRequest(string lotNumber) {
         this.lotNumber = lotNumber;
     }
 }
@@ -56,17 +56,17 @@ public partial class GetLotRequest {
 [System.Diagnostics.DebuggerStepThroughAttribute()]
 [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
 [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-[System.ServiceModel.MessageContractAttribute(WrapperName="GetLotResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
-public partial class GetLotResponse {
+[System.ServiceModel.MessageContractAttribute(WrapperName="GetRouteOperationsResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class GetRouteOperationsResponse {
     
     [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
-    public App.Mock.WebService.Lot[] GetLotResult;
+    public App.Mock.WebService.RouteOperation[] GetRouteOperationsResult;
     
-    public GetLotResponse() {
+    public GetRouteOperationsResponse() {
     }
     
-    public GetLotResponse(App.Mock.WebService.Lot[] GetLotResult) {
-        this.GetLotResult = GetLotResult;
+    public GetRouteOperationsResponse(App.Mock.WebService.RouteOperation[] GetRouteOperationsResult) {
+        this.GetRouteOperationsResult = GetRouteOperationsResult;
     }
 }
 
@@ -136,36 +136,36 @@ public partial class MockServiceClient : System.ServiceModel.ClientBase<IMockSer
     }
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    GetLotResponse IMockService.GetLot(GetLotRequest request) {
-        return base.Channel.GetLot(request);
+    GetRouteOperationsResponse IMockService.GetRouteOperations(GetRouteOperationsRequest request) {
+        return base.Channel.GetRouteOperations(request);
     }
     
-    public App.Mock.WebService.Lot[] GetLot(string lotNumber) {
-        GetLotRequest inValue = new GetLotRequest();
+    public App.Mock.WebService.RouteOperation[] GetRouteOperations(string lotNumber) {
+        GetRouteOperationsRequest inValue = new GetRouteOperationsRequest();
         inValue.lotNumber = lotNumber;
-        GetLotResponse retVal = ((IMockService)(this)).GetLot(inValue);
-        return retVal.GetLotResult;
+        GetRouteOperationsResponse retVal = ((IMockService)(this)).GetRouteOperations(inValue);
+        return retVal.GetRouteOperationsResult;
     }
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    System.IAsyncResult IMockService.BeginGetLot(GetLotRequest request, System.AsyncCallback callback, object asyncState) {
-        return base.Channel.BeginGetLot(request, callback, asyncState);
+    System.IAsyncResult IMockService.BeginGetRouteOperations(GetRouteOperationsRequest request, System.AsyncCallback callback, object asyncState) {
+        return base.Channel.BeginGetRouteOperations(request, callback, asyncState);
     }
     
-    public System.IAsyncResult BeginGetLot(string lotNumber, System.AsyncCallback callback, object asyncState) {
-        GetLotRequest inValue = new GetLotRequest();
+    public System.IAsyncResult BeginGetRouteOperations(string lotNumber, System.AsyncCallback callback, object asyncState) {
+        GetRouteOperationsRequest inValue = new GetRouteOperationsRequest();
         inValue.lotNumber = lotNumber;
-        return ((IMockService)(this)).BeginGetLot(inValue, callback, asyncState);
+        return ((IMockService)(this)).BeginGetRouteOperations(inValue, callback, asyncState);
     }
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    GetLotResponse IMockService.EndGetLot(System.IAsyncResult result) {
-        return base.Channel.EndGetLot(result);
+    GetRouteOperationsResponse IMockService.EndGetRouteOperations(System.IAsyncResult result) {
+        return base.Channel.EndGetRouteOperations(result);
     }
     
-    public App.Mock.WebService.Lot[] EndGetLot(System.IAsyncResult result) {
-        GetLotResponse retVal = ((IMockService)(this)).EndGetLot(result);
-        return retVal.GetLotResult;
+    public App.Mock.WebService.RouteOperation[] EndGetRouteOperations(System.IAsyncResult result) {
+        GetRouteOperationsResponse retVal = ((IMockService)(this)).EndGetRouteOperations(result);
+        return retVal.GetRouteOperationsResult;
     }
     
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -209,8 +209,8 @@ namespace App.Mock.WebService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Lot", Namespace="http://schemas.datacontract.org/2004/07/App.Mock.WebService")]
-    public partial class Lot : object, System.Runtime.Serialization.IExtensibleDataObject {
+    [System.Runtime.Serialization.DataContractAttribute(Name="RouteOperation", Namespace="http://schemas.datacontract.org/2004/07/App.Mock.WebService")]
+    public partial class RouteOperation : object, System.Runtime.Serialization.IExtensibleDataObject {
         
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         

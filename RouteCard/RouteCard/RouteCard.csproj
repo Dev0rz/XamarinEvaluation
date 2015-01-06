@@ -51,18 +51,20 @@
     <Compile Include="Entities\User.cs" />
     <Compile Include="Managers\AccountManager.cs" />
     <Compile Include="Managers\RouteManager.cs" />
-    <Compile Include="Service References\localhost\Reference.cs">
+    <Compile Include="Service References\MockService\Reference.cs">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\ISimpleStorage.cs" />
+    <Compile Include="AuthorizationException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
-    <None Include="Service References\localhost\MockService.xsd" />
-    <None Include="Service References\localhost\MockService0.xsd" />
-    <None Include="Service References\localhost\MockService.wsdl" />
-    <None Include="Service References\localhost\MockService.disco" />
-    <None Include="Service References\localhost\MockService1.xsd" />
-    <None Include="Service References\localhost\Reference.svcmap">
+    <None Include="Service References\MockService\MockService.xsd" />
+    <None Include="Service References\MockService\MockService.wsdl" />
+    <None Include="Service References\MockService\MockService.disco" />
+    <None Include="Service References\MockService\MockService0.xsd" />
+    <None Include="Service References\MockService\MockService1.xsd" />
+    <None Include="Service References\MockService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -74,11 +76,12 @@
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Managers\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Service References\localhost" />
+    <WCFMetadataStorage Include="Service References\MockService" />
   </ItemGroup>
 </Project>
