@@ -1,5 +1,4 @@
 Protoype
 ========
 
-Xamarin App Prototype
-foo
+Xamarin Evaluation Project
