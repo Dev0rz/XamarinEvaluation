@@ -15,28 +15,9 @@ namespace RouteCard
 			this.storage = storage;
 		}
 
-		private bool isAuthorized = false;
-		public bool IsAuthorized()
-		{
-			return false;
-		}
-
-		public bool AutoAuthorize()
-		{
-			User u = GetCredentials ();
-
-			if (u == null) {
-				return false;
-			}
-
-			isAuthorized = _Authorize (u.UserName, u.Password);
-			return isAuthorized;
-		}
-
 		private User GetCredentials()
 		{
 			User u = new User ();
-
 			u.UserName = storage.GetString ("user");
 			u.Password = storage.GetString ("pass");
 
@@ -53,18 +34,33 @@ namespace RouteCard
 			storage.PutString ("pass", password);
 		}
 
-		public bool Authorize (String username, String password)
+		public void ClearCredentials() {
+			storage.PutString ("user", "");
+			storage.PutString ("pass", "");
+		}
+			
+		public bool AutoAuthenticate()
 		{
-			if (_Authorize (username, password)) {
+			User u = GetCredentials ();
+
+			if (u == null) {
+				return false;
+			}
+				
+			return _Authenticate (u.UserName, u.Password);
+		}
+
+		public bool Authenticate (String username, String password)
+		{
+			if (_Authenticate (username, password)) {
 				StoreCredentials (username, password);
-				isAuthorized = true;
 				return true;
 			}
 
 			return false;
 		}
 
-		private bool _Authorize (String username, String password)
+		private bool _Authenticate (String username, String password)
 		{
 			try {
 				MockServiceClient client = new MockServiceClient (binding, addr);

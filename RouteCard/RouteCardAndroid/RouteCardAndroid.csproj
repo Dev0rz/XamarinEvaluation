@@ -76,11 +76,13 @@
     <AndroidResource Include="Resources\layout-xlarge-land\QueryResultItem.axml" />
     <AndroidResource Include="Resources\layout-xlarge-port\QueryResultItem.axml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
+    <AndroidResource Include="Resources\menu\query_menu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Screens\" />
     <Folder Include="Adapters\" />
+    <Folder Include="Resources\menu\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RouteCard\RouteCard.csproj">

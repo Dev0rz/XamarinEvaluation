@@ -18,6 +18,8 @@ namespace RouteCardAndroid.Screens
 	[Activity (Label = "Route Card", MainLauncher = true, Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
 	public class QueryScreen : Activity
 	{
+		static readonly int LOGIN_REQUEST = 1;
+
 		EditText lotNumberEditText;
 		Button searchButton;
 
@@ -28,16 +30,10 @@ namespace RouteCardAndroid.Screens
 			base.OnCreate(bundle);
 
 			// init app context for simple storage
-			AndroidApp.App.SetContext (ApplicationContext);
+			AndroidApp.App.SetContext(ApplicationContext);
 
-			if (!AndroidApp.App.GetAccountManager ().AutoAuthorize ()) {
-				// create intent
-				Intent LoginIntent = new Intent (this, typeof(LoginScreen));
-
-				// start activity
-				StartActivity (LoginIntent);
-				return;
-			}
+			// activate the action bar and display it in navigation mode
+			RequestWindowFeature (WindowFeatures.ActionBar);
 
 			// set layout
 			SetContentView(Resource.Layout.Query);
@@ -56,19 +52,28 @@ namespace RouteCardAndroid.Screens
 				// if lot was found
 				if (r != null) {
 					// create intent
-					Intent queryResultIntent = new Intent (this, typeof(QueryResultScreen));
+					Intent queryResultIntent = new Intent(this, typeof(QueryResultScreen));
 
 					// insert data in intent
 					queryResultIntent.PutExtra("LotNumber", lotNumber);
 
 					// start activity
-					StartActivity (queryResultIntent);
+					StartActivity(queryResultIntent);
 				}
 				else {
 					// show toast
-					Toast.MakeText (this, Resource.String.toast_lot_not_found, ToastLength.Long).Show();
+					Toast.MakeText(this, Resource.String.toast_lot_not_found, ToastLength.Long).Show();
 				}
 			};
+
+			// try to auto authenticate
+			if (!AndroidApp.App.GetAccountManager().AutoAuthenticate()) {
+				// create intent
+				Intent LoginIntent = new Intent(this, typeof(LoginScreen));
+
+				// start activity
+				StartActivityForResult(LoginIntent, LOGIN_REQUEST);
+			}
 		}
 
 		protected override void OnStart()
@@ -79,9 +84,46 @@ namespace RouteCardAndroid.Screens
 		protected override void OnResume()
 		{
 			base.OnResume();
+		}
+			
+		protected void onActivityResult(int requestCode, Result resultCode, Intent data) {
+			// check which request we're responding to
+			if (requestCode == LOGIN_REQUEST) {
+				// if login was canceled close activity
+				if (resultCode == Result.Canceled) {
+					Finish();
+				}
+			}
+		}
+			
+		public override bool OnCreateOptionsMenu (IMenu menu)
+		{
+			MenuInflater.Inflate (Resource.Menu.query_menu, menu);       
+			return true;
+		}
 
-			if (!AndroidApp.App.GetAccountManager ().IsAuthorized ()) {
-				this.Finish ();
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+				case Resource.Id.menuItemLogOffUser:
+					// clear credentials
+					AndroidApp.App.GetAccountManager ().ClearCredentials ();
+					// close activity
+					Finish();
+					return true;
+				case Resource.Id.menuItemChangeUser:
+					// create intent
+					Intent LoginIntent = new Intent(this, typeof(LoginScreen));
+					// start activity
+					StartActivityForResult(LoginIntent, LOGIN_REQUEST);
+					return true;
+				case Resource.Id.menuItemChangeUser:
+					// TODO: start about activity
+					return true;
+				default: 
+					Finish();
+					return base.OnOptionsItemSelected(item);
 			}
 		}
 	}

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menuItemLogOffUser"
+    		android:showAsAction="never"
+            android:orderInCategory="100"
+            android:title="@string/menu_item_label_log_off_user"/>
+	<item android:id="@+id/menuItemChangeUser"
+            android:showAsAction="never"
+            android:orderInCategory="200"
+            android:title="@string/menu_item_label_change_user"/>
+	<item android:id="@+id/menuItemAbout"
+            android:showAsAction="never"
+            android:orderInCategory="300"
+            android:title="@string/menu_item_label_about"/>
+</menu>
+
