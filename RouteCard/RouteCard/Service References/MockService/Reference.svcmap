@@ -21,10 +21,11 @@
     <MetadataSource Address="http://46.163.111.88/MockService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MockService.xsd" MetadataType="Schema" ID="eee02cea-2583-4cf6-9353-6a561dd776ba" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd1" />
-    <MetadataFile FileName="MockService.wsdl" MetadataType="Wsdl" ID="499db776-51ad-4a21-94e9-502a710f2d2e" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?wsdl" />
-    <MetadataFile FileName="MockService.disco" MetadataType="Disco" ID="232ee998-1d37-4798-87ee-b73301771b94" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?disco" />
-    <MetadataFile FileName="MockService0.xsd" MetadataType="Schema" ID="64f2a6cf-a958-4819-96c1-e833068ccdba" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd2" />
-    <MetadataFile FileName="MockService1.xsd" MetadataType="Schema" ID="2e2c8dda-42d8-46e7-a563-2a3f6070399b" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MockService.xsd" MetadataType="Schema" ID="e0e8b9a8-27b2-4b06-a42c-375f04a734a2" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MockService0.xsd" MetadataType="Schema" ID="76e13185-9d8b-4879-854f-4fea89f788af" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MockService1.xsd" MetadataType="Schema" ID="8f708dc0-842c-49e1-987c-66bcff067e5e" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd3" />
+    <MetadataFile FileName="MockService.wsdl" MetadataType="Wsdl" ID="391d34c0-9aa0-4596-8fb5-18e796a34933" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?wsdl" />
+    <MetadataFile FileName="MockService.disco" MetadataType="Disco" ID="fc232430-0ca1-4f85-a0a5-9d88dd2eb2d9" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?disco" />
+    <MetadataFile FileName="MockService2.xsd" MetadataType="Schema" ID="7a4f3ade-b835-4c58-a2da-ee7953114bff" SourceId="1" SourceUrl="http://46.163.111.88/MockService.svc?xsd=xsd0" />
   </Metadata>
 </ReferenceGroup>

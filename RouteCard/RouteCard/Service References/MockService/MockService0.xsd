@@ -8,22 +8,21 @@
   <xs:element name="ArrayOfRouteOperation" nillable="true" type="tns:ArrayOfRouteOperation" />
   <xs:complexType name="RouteOperation">
     <xs:sequence>
+      <xs:element minOccurs="0" name="CT_Plan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CT_Q" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Equipment" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Hold_Category" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Hold_Name" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Hold_Note" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Hold_Reason" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Hold_Release" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Oper" type="xs:int" />
-      <xs:element minOccurs="0" name="Oper_Desc" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Operator" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Planed_Hold" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Process" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Process_Nr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturing_Line" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op_Seq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Production_Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RPT" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Route" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="Specification" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="RouteOperation" nillable="true" type="tns:RouteOperation" />

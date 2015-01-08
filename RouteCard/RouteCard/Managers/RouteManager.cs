@@ -33,12 +33,20 @@ namespace RouteCard.Core
 			foreach (var item in routeOperation) {
 
 				RouteOperation op = new RouteOperation () {
-					Equipment = item.Equipment,
-					Hold_Reason = item.Hold_Reason,
-					Hold_Category = item.Hold_Category,
-					Hold_Note = item.Hold_Note,
-					Hold_Name = item.Hold_Name,
-					Planed_Hold = item.Planed_Hold,
+					Type = item.Type,
+					Product_Type  = item.Product_Type,
+					Product  = item.Product,
+					Plant = item.Plant,
+					Manufacturing_Line = item.Manufacturing_Line,
+					Production_Level = item.Production_Level, 
+					Route = item.Route, 
+					Version = item.Version,
+					Op_Seq = item.Op_Seq,
+					Op = item.Op, 
+					Position = item.Position,
+					CT_Plan = item.CT_Plan, 
+					CT_Q = item.CT_Q,
+					RPT = item.RPT, 
 					Color = item.Color
 				};
 

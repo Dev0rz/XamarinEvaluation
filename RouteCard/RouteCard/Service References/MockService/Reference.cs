@@ -34,6 +34,24 @@ public interface IMockService {
     System.IAsyncResult BeginIsValidUser(IsValidUserRequest request, System.AsyncCallback callback, object asyncState);
     
     IsValidUserResponse EndIsValidUser(System.IAsyncResult result);
+    
+    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "EDC_GetParametersRequest" nicht mit dem Standardwert (RouteCard.MockService) übereinstimmt.
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMockService/EDC_GetParameters", ReplyAction="http://tempuri.org/IMockService/EDC_GetParametersResponse")]
+    EDC_GetParametersResponse EDC_GetParameters(EDC_GetParametersRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IMockService/EDC_GetParameters", ReplyAction="http://tempuri.org/IMockService/EDC_GetParametersResponse")]
+    System.IAsyncResult BeginEDC_GetParameters(EDC_GetParametersRequest request, System.AsyncCallback callback, object asyncState);
+    
+    EDC_GetParametersResponse EndEDC_GetParameters(System.IAsyncResult result);
+    
+    // CODEGEN: Der Nachrichtenvertrag wird generiert, da der Wrappernamespace (http://tempuri.org/) von Nachricht "EDC_GetValuesRequest" nicht mit dem Standardwert (RouteCard.MockService) übereinstimmt.
+    [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IMockService/EDC_GetValues", ReplyAction="http://tempuri.org/IMockService/EDC_GetValuesResponse")]
+    EDC_GetValuesResponse EDC_GetValues(EDC_GetValuesRequest request);
+    
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IMockService/EDC_GetValues", ReplyAction="http://tempuri.org/IMockService/EDC_GetValuesResponse")]
+    System.IAsyncResult BeginEDC_GetValues(EDC_GetValuesRequest request, System.AsyncCallback callback, object asyncState);
+    
+    EDC_GetValuesResponse EndEDC_GetValues(System.IAsyncResult result);
 }
 
 [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -105,6 +123,74 @@ public partial class IsValidUserResponse {
     
     public IsValidUserResponse(bool IsValidUserResult) {
         this.IsValidUserResult = IsValidUserResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(WrapperName="EDC_GetParameters", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class EDC_GetParametersRequest {
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+    public string lotNumber;
+    
+    public EDC_GetParametersRequest() {
+    }
+    
+    public EDC_GetParametersRequest(string lotNumber) {
+        this.lotNumber = lotNumber;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(WrapperName="EDC_GetParametersResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class EDC_GetParametersResponse {
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+    public System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetParametersResult;
+    
+    public EDC_GetParametersResponse() {
+    }
+    
+    public EDC_GetParametersResponse(System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetParametersResult) {
+        this.EDC_GetParametersResult = EDC_GetParametersResult;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(WrapperName="EDC_GetValues", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class EDC_GetValuesRequest {
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+    public string lotNumber;
+    
+    public EDC_GetValuesRequest() {
+    }
+    
+    public EDC_GetValuesRequest(string lotNumber) {
+        this.lotNumber = lotNumber;
+    }
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+[System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+[System.ServiceModel.MessageContractAttribute(WrapperName="EDC_GetValuesResponse", WrapperNamespace="http://tempuri.org/", IsWrapped=true)]
+public partial class EDC_GetValuesResponse {
+    
+    [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://tempuri.org/", Order=0)]
+    public System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetValuesResult;
+    
+    public EDC_GetValuesResponse() {
+    }
+    
+    public EDC_GetValuesResponse(System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetValuesResult) {
+        this.EDC_GetValuesResult = EDC_GetValuesResult;
     }
 }
 
@@ -202,6 +288,72 @@ public partial class MockServiceClient : System.ServiceModel.ClientBase<IMockSer
         IsValidUserResponse retVal = ((IMockService)(this)).EndIsValidUser(result);
         return retVal.IsValidUserResult;
     }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    EDC_GetParametersResponse IMockService.EDC_GetParameters(EDC_GetParametersRequest request) {
+        return base.Channel.EDC_GetParameters(request);
+    }
+    
+    public System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetParameters(string lotNumber) {
+        EDC_GetParametersRequest inValue = new EDC_GetParametersRequest();
+        inValue.lotNumber = lotNumber;
+        EDC_GetParametersResponse retVal = ((IMockService)(this)).EDC_GetParameters(inValue);
+        return retVal.EDC_GetParametersResult;
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.IAsyncResult IMockService.BeginEDC_GetParameters(EDC_GetParametersRequest request, System.AsyncCallback callback, object asyncState) {
+        return base.Channel.BeginEDC_GetParameters(request, callback, asyncState);
+    }
+    
+    public System.IAsyncResult BeginEDC_GetParameters(string lotNumber, System.AsyncCallback callback, object asyncState) {
+        EDC_GetParametersRequest inValue = new EDC_GetParametersRequest();
+        inValue.lotNumber = lotNumber;
+        return ((IMockService)(this)).BeginEDC_GetParameters(inValue, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    EDC_GetParametersResponse IMockService.EndEDC_GetParameters(System.IAsyncResult result) {
+        return base.Channel.EndEDC_GetParameters(result);
+    }
+    
+    public System.Collections.Generic.KeyValuePairOfintstring[] EndEDC_GetParameters(System.IAsyncResult result) {
+        EDC_GetParametersResponse retVal = ((IMockService)(this)).EndEDC_GetParameters(result);
+        return retVal.EDC_GetParametersResult;
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    EDC_GetValuesResponse IMockService.EDC_GetValues(EDC_GetValuesRequest request) {
+        return base.Channel.EDC_GetValues(request);
+    }
+    
+    public System.Collections.Generic.KeyValuePairOfintstring[] EDC_GetValues(string lotNumber) {
+        EDC_GetValuesRequest inValue = new EDC_GetValuesRequest();
+        inValue.lotNumber = lotNumber;
+        EDC_GetValuesResponse retVal = ((IMockService)(this)).EDC_GetValues(inValue);
+        return retVal.EDC_GetValuesResult;
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    System.IAsyncResult IMockService.BeginEDC_GetValues(EDC_GetValuesRequest request, System.AsyncCallback callback, object asyncState) {
+        return base.Channel.BeginEDC_GetValues(request, callback, asyncState);
+    }
+    
+    public System.IAsyncResult BeginEDC_GetValues(string lotNumber, System.AsyncCallback callback, object asyncState) {
+        EDC_GetValuesRequest inValue = new EDC_GetValuesRequest();
+        inValue.lotNumber = lotNumber;
+        return ((IMockService)(this)).BeginEDC_GetValues(inValue, callback, asyncState);
+    }
+    
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    EDC_GetValuesResponse IMockService.EndEDC_GetValues(System.IAsyncResult result) {
+        return base.Channel.EndEDC_GetValues(result);
+    }
+    
+    public System.Collections.Generic.KeyValuePairOfintstring[] EndEDC_GetValues(System.IAsyncResult result) {
+        EDC_GetValuesResponse retVal = ((IMockService)(this)).EndEDC_GetValues(result);
+        return retVal.EDC_GetValuesResult;
+    }
 }
 namespace App.Mock.WebService {
     using System.Runtime.Serialization;
@@ -214,37 +366,35 @@ namespace App.Mock.WebService {
         
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
+        private string CT_PlanField;
+        
+        private string CT_QField;
+        
         private string ColorField;
         
-        private string CommentField;
+        private string Manufacturing_LineField;
         
-        private string EquipmentField;
+        private string OpField;
         
-        private string Hold_CategoryField;
+        private string Op_SeqField;
         
-        private string Hold_NameField;
+        private string PlantField;
         
-        private string Hold_NoteField;
+        private string PositionField;
         
-        private string Hold_ReasonField;
+        private string ProductField;
         
-        private string Hold_ReleaseField;
+        private string Product_TypeField;
         
-        private int OperField;
+        private string Production_LevelField;
         
-        private string Oper_DescField;
-        
-        private string OperatorField;
-        
-        private string Planed_HoldField;
-        
-        private string ProcessField;
-        
-        private string Process_NrField;
+        private string RPTField;
         
         private string RouteField;
         
-        private string SpecificationField;
+        private string TypeField;
+        
+        private string VersionField;
         
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -252,6 +402,26 @@ namespace App.Mock.WebService {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CT_Plan {
+            get {
+                return this.CT_PlanField;
+            }
+            set {
+                this.CT_PlanField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CT_Q {
+            get {
+                return this.CT_QField;
+            }
+            set {
+                this.CT_QField = value;
             }
         }
         
@@ -266,132 +436,92 @@ namespace App.Mock.WebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comment {
+        public string Manufacturing_Line {
             get {
-                return this.CommentField;
+                return this.Manufacturing_LineField;
             }
             set {
-                this.CommentField = value;
+                this.Manufacturing_LineField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Equipment {
+        public string Op {
             get {
-                return this.EquipmentField;
+                return this.OpField;
             }
             set {
-                this.EquipmentField = value;
+                this.OpField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Hold_Category {
+        public string Op_Seq {
             get {
-                return this.Hold_CategoryField;
+                return this.Op_SeqField;
             }
             set {
-                this.Hold_CategoryField = value;
+                this.Op_SeqField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Hold_Name {
+        public string Plant {
             get {
-                return this.Hold_NameField;
+                return this.PlantField;
             }
             set {
-                this.Hold_NameField = value;
+                this.PlantField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Hold_Note {
+        public string Position {
             get {
-                return this.Hold_NoteField;
+                return this.PositionField;
             }
             set {
-                this.Hold_NoteField = value;
+                this.PositionField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Hold_Reason {
+        public string Product {
             get {
-                return this.Hold_ReasonField;
+                return this.ProductField;
             }
             set {
-                this.Hold_ReasonField = value;
+                this.ProductField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Hold_Release {
+        public string Product_Type {
             get {
-                return this.Hold_ReleaseField;
+                return this.Product_TypeField;
             }
             set {
-                this.Hold_ReleaseField = value;
+                this.Product_TypeField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Oper {
+        public string Production_Level {
             get {
-                return this.OperField;
+                return this.Production_LevelField;
             }
             set {
-                this.OperField = value;
+                this.Production_LevelField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Oper_Desc {
+        public string RPT {
             get {
-                return this.Oper_DescField;
+                return this.RPTField;
             }
             set {
-                this.Oper_DescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Operator {
-            get {
-                return this.OperatorField;
-            }
-            set {
-                this.OperatorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Planed_Hold {
-            get {
-                return this.Planed_HoldField;
-            }
-            set {
-                this.Planed_HoldField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Process {
-            get {
-                return this.ProcessField;
-            }
-            set {
-                this.ProcessField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Process_Nr {
-            get {
-                return this.Process_NrField;
-            }
-            set {
-                this.Process_NrField = value;
+                this.RPTField = value;
             }
         }
         
@@ -406,12 +536,67 @@ namespace App.Mock.WebService {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Specification {
+        public string Type {
             get {
-                return this.SpecificationField;
+                return this.TypeField;
             }
             set {
-                this.SpecificationField = value;
+                this.TypeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Version {
+            get {
+                return this.VersionField;
+            }
+            set {
+                this.VersionField = value;
+            }
+        }
+    }
+}
+namespace System.Collections.Generic {
+    using System.Runtime.Serialization;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="KeyValuePairOfintstring", Namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic")]
+    public partial struct KeyValuePairOfintstring : System.Runtime.Serialization.IExtensibleDataObject {
+        
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int keyField;
+        
+        private string valueField;
+        
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int key {
+            get {
+                return this.keyField;
+            }
+            set {
+                this.keyField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public string value {
+            get {
+                return this.valueField;
+            }
+            set {
+                this.valueField = value;
             }
         }
     }
