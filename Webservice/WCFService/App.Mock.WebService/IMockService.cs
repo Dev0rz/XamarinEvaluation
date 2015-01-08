@@ -12,60 +12,63 @@ namespace App.Mock.WebService
     public interface IMockService
     {
         [OperationContract]
-        List<Lot> GetLot(String lotNumber);
+        List<RouteOperation> GetRouteOperations(String lotNumber);
 
         [OperationContract]
         bool IsValidUser(String Username, String Password);
+
+        [OperationContract]
+        List<KeyValuePair<int, String>> EDC_GetParameters(String lotNumber);
+
+        [OperationContract]
+        List<KeyValuePair<int, String>> EDC_GetValues(String lotNumber);
     }
 
     //Oper;Process Nr;Process;Equipment;Specification;Oper. Desc.;Hold Category;Comment;Route;Planed Hold;Hold Name;Hold Note;Hold Reason;Hold Release;Operator;Color
     [DataContract]
-    public class Lot
+    public class RouteOperation
     {
         [DataMember]
-        public int Oper { get; set; }
+        public String Type { get; set; }
 
         [DataMember]
-        public String Process { get; set; }
+        public String Product_Type { get; set; }
 
         [DataMember]
-        public String Process_Nr { get; set; }
+        public String Product { get; set; }
 
         [DataMember]
-        public String Equipment { get; set; }
+        public String Plant { get; set; }
 
         [DataMember]
-        public String Specification { get; set; }
+        public String Manufacturing_Line { get; set; }
 
         [DataMember]
-        public String Oper_Desc { get; set; }
-
-        [DataMember]
-        public String Hold_Category { get; set; }
-
-        [DataMember]
-        public String Comment { get; set; }
+        public String Production_Level { get; set; }
 
         [DataMember]
         public String Route { get; set; }
 
         [DataMember]
-        public String Planed_Hold { get; set; }
+        public String Version { get; set; }
 
         [DataMember]
-        public String Hold_Name { get; set; }
+        public String Op_Seq { get; set; }
 
         [DataMember]
-        public String Hold_Note { get; set; }
+        public String Op { get; set; }
 
         [DataMember]
-        public String Hold_Reason { get; set; }
+        public String Position { get; set; }
 
         [DataMember]
-        public String Hold_Release { get; set; }
+        public String CT_Plan { get; set; }
 
         [DataMember]
-        public String Operator { get; set; }
+        public String CT_Q { get; set; }
+
+        [DataMember]
+        public String RPT { get; set; }
 
         [DataMember]
         public String Color { get; set; }

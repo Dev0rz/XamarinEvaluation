@@ -1,0 +1,2 @@
+1@RouteCard;Position;Facility;Production Level; Operation;Equipment;CustomColumn1;CustomColumn2@value1;value2;value3;value4;value5;value6;value7;value8
+2@RouteCard;Position;Facility;Production Level; Operation;Equipment;CustomColumn3@value1;value2;value3;value4;value5;value6;value7
