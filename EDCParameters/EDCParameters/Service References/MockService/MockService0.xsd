@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/App.Mock.WebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/App.Mock.WebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfRouteOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RouteOperation" nillable="true" type="tns:RouteOperation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRouteOperation" nillable="true" type="tns:ArrayOfRouteOperation" />
+  <xs:complexType name="RouteOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CT_Plan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CT_Q" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Manufacturing_Line" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Op_Seq" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Plant" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Position" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Product_Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Production_Level" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RPT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Route" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RouteOperation" nillable="true" type="tns:RouteOperation" />
+</xs:schema>

@@ -6,11 +6,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms.Platform.Android;
 
 namespace EDCParametersAndroid
 {
 	[Activity (Label = "EDCParametersAndroid", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : AndroidActivity
 	{
 		int count = 1;
 
@@ -18,16 +19,9 @@ namespace EDCParametersAndroid
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
-			SetContentView (Resource.Layout.Main);
+			Xamarin.Forms.Forms.Init(this, bundle);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			SetPage(AndroidApp.GetMainPage());
 		}
 	}
 }

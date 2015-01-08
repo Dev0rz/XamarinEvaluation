@@ -1,0 +1,24 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android4.0.3" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="EDCParameters\Views\Login.xaml.cs">
+    <Files>
+      <File FileName="EDCParameters\Managers.cs" Line="1" Column="1" />
+      <File FileName="EDCParameters\Managers\EDCManager.cs" Line="3" Column="3" />
+      <File FileName="EDCParameters\Application.cs" Line="4" Column="4" />
+      <File FileName="EDCParameters\Managers\AccountManager.cs" Line="14" Column="14" />
+      <File FileName="EDCParameters\Interfaces\ISimpleStorage.cs" Line="24" Column="24" />
+      <File FileName="EDCParameters\Entities\User.cs" Line="3" Column="3" />
+      <File FileName="EDCParameters\AuthorizationException.cs" Line="3" Column="3" />
+      <File FileName="EDCParametersAndroid\AndroidApp.cs" Line="8" Column="8" />
+      <File FileName="EDCParametersAndroid\SimpleStorage.cs" Line="3" Column="3" />
+      <File FileName="test\EmptyClass.cs" Line="4" Column="4" />
+      <File FileName="EDCParameters\Views\Login.xaml" Line="1" Column="1" />
+      <File FileName="EDCParameters\Views\Login.xaml.cs" Line="17" Column="17" />
+      <File FileName="EDCParametersAndroid\MainActivity.cs" Line="2" Column="2" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
