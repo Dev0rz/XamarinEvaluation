@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="EDCParameters.DetailPage">
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="100" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="Auto" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+    <Label Text="Parameter 1" Grid.Row="1" Grid.Column="0" />
+    <Label Text="Value 1" Grid.Row="1" Grid.Column="1" />
+    <Label Text="Parameter 2" Grid.Row="2" Grid.Column="0" />
+    <Label Text="Value 2" Grid.Row="2" Grid.Column="1" />
+    <Label Text="Parameter 3" Grid.Row="3" Grid.Column="0" />
+    <Label Text="Value 3" Grid.Row="3" Grid.Column="1" />
+    <Label Text="Parameter 4" Grid.Row="4" Grid.Column="0" />
+    <Label Text="Value 4" Grid.Row="4" Grid.Column="1" />
+    <Label Text="Parameter 5" Grid.Row="5" Grid.Column="0" />
+    <Label Text="Value 5" Grid.Row="5" Grid.Column="1" />
+    <Label Text="Parameter 6" Grid.Row="6" Grid.Column="0" />
+    <Label Text="Value 6" Grid.Row="6" Grid.Column="1" />
+    <Label Text="Parameter 7" Grid.Row="7" Grid.Column="0" />
+    <Label Text="Value 7" Grid.Row="7" Grid.Column="1" />
+    <Label Text="Parameter 8" Grid.Row="8" Grid.Column="0" />
+    <Label Text="Value 8" Grid.Row="8" Grid.Column="1" />
+    <Label Text="Parameter 9" Grid.Row="9" Grid.Column="0" />
+    <Label Text="Value 9" Grid.Row="9" Grid.Column="1" />
+  
+  </Grid>
+</ContentPage>

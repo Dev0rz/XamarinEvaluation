@@ -16,8 +16,11 @@ namespace EDCParameters {
     
     public partial class MainPage : ContentPage {
         
+        private Entry RouteCardEntry;
+        
         private void InitializeComponent() {
             this.LoadFromXaml(typeof(MainPage));
+            RouteCardEntry = this.FindByName<Entry>("RouteCardEntry");
         }
     }
 }

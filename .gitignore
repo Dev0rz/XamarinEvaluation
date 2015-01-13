@@ -1,1 +1,8 @@
 *.suo
+Webservice/WCFService/App.Mock.WebService/bin/App.Mock.WebService.dll
+Webservice/WCFService/App.Mock.WebService/bin/App.Mock.WebService.dll.config
+Webservice/WCFService/App.Mock.WebService/bin/App.Mock.WebService.pdb
+Webservice/WCFService/App.Mock.WebService/obj/Debug/App.Mock.WebService.csproj.FileListAbsolute.txt
+Webservice/WCFService/App.Mock.WebService/obj/Debug/App.Mock.WebService.dll
+Webservice/WCFService/App.Mock.WebService/obj/Debug/App.Mock.WebService.pdb
+Webservice/WCFService/App.Mock.WebService/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

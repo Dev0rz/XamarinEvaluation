@@ -11,17 +11,19 @@ using Xamarin.Forms.Platform.Android;
 namespace EDCParametersAndroid
 {
 	[Activity (Label = "EDCParametersAndroid", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : AndroidActivity
+	public class MainActivity : FormsApplicationActivity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
+
 			Xamarin.Forms.Forms.Init(this, bundle);
 
-			SetPage(AndroidApp.GetMainPage());
+			AndroidApp app = new AndroidApp ();
+			app.Init (this);
+
+			LoadApplication(app);
 		}
 	}
 }

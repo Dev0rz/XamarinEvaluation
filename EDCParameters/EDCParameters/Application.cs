@@ -3,11 +3,19 @@ using Xamarin.Forms;
 
 namespace EDCParameters
 {
-	public abstract class Application
+	public class EDCParametersApp : Application
 	{
 		protected ISimpleStorage storage = null;
 		protected AccountManager AccountMgr = null;
 		protected EDCManager EDCMgr = null;
+
+		public void Init()
+		{
+			EDCMgr = new EDCManager ();
+			AccountMgr = new AccountManager (storage);
+
+			MainPage = new EDCParameters.MainPage (this);
+		}
 
 		public ISimpleStorage Storage
 		{
@@ -15,40 +23,18 @@ namespace EDCParameters
 			set { storage = value; }
 		}
 
-		public AccountManager GetAccountManager()
+		public AccountManager AccountManager
 		{
-			if (storage == null) {
-				return null;
-			}
-
-			if (AccountMgr == null) {
-				AccountMgr = new AccountManager (storage);
-			}
-
-			return AccountMgr;
+			get { return AccountMgr; }
 		}
 
-		public EDCManager GetEDCManager()
+		public EDCManager EDCManager
 		{
-			if (EDCMgr == null) {
-				EDCMgr = new EDCManager ();
-			}
-
-			return EDCMgr;
+			get { return EDCMgr; }
 		}
 
-		public static Page GetMainPage()
+		public EDCParametersApp()
 		{
-			return new ContentPage
-			{
-				Content = new Label
-				{
-					Text = "Hello, Forms !",
-					VerticalOptions = LayoutOptions.CenterAndExpand,
-					HorizontalOptions = LayoutOptions.CenterAndExpand,
-				},
-			};
-
 		}
 	}
 }

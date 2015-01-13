@@ -5,7 +5,7 @@ using Android.Content;
 
 namespace EDCParametersAndroid
 {
-	public class AndroidApp : Application
+	public class AndroidApp : EDCParametersApp
 	{
 		protected static AndroidApp app = null;
 		public static AndroidApp App 
@@ -19,9 +19,10 @@ namespace EDCParametersAndroid
 			}
 		}
 
-		public void SetContext(Context ctx)
+		public void Init(Context ctx)
 		{
 			SimpleStorage.SetContext(ctx);
+			base.Init ();
 		}
 
 		internal AndroidApp ()

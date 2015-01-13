@@ -3,7 +3,7 @@ using RouteCard.Core;
 
 namespace RouteCard
 {
-	public abstract class Application
+	public abstract class Application : Application
 	{
 		protected ISimpleStorage storage = null;
 		protected AccountManager AccountMgr = null;

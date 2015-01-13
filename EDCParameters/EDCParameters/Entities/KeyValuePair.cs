@@ -2,6 +2,8 @@
 
 namespace EDCParameters
 {
+	// Datastructure that is not available within the pcl.
+	// Can be added to the core library
 	public struct KeyValuePair<TKey, TValue> {
 		private TKey key;
 		private TValue value;

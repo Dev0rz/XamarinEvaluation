@@ -1,0 +1,11 @@
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\bin\Debug\RouteCard.dll
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\bin\Debug\RouteCard.pdb
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\bin\Debug\RouteCard.dll.mdb
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\bin\Debug\RouteCard.RouteCard.apk
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\bin\Debug\RouteCard.RouteCard-Signed.apk
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\RouteCard.dll
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\RouteCard.pdb
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\android\bin\RouteCard.RouteCard.apk
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\res\values\strings.xml
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\R.cs.flag
+C:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\RouteCard\RouteCard\obj\Debug\uploadflags.txt
