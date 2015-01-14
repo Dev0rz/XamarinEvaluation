@@ -15,7 +15,7 @@ using RouteCardAndroid;
 
 namespace RouteCardAndroid.Screens
 {
-	[Activity (Label = "Route Card Result", Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
+	[Activity (Label = "Route Card Result", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]			
 	public class QueryResultScreen : Activity
 	{
 		ListView queryResultListView;
@@ -23,43 +23,43 @@ namespace RouteCardAndroid.Screens
 		IList<RouteOperation> routeOperations;
 		Adapters.ResultAdapter routeOperationsAdapter;
 
-		public QueryResultScreen()
+		public QueryResultScreen ()
 		{
-			routeOperations = new List<RouteOperation>();
+			routeOperations = new List<RouteOperation> ();
 		}
 
-		protected override void OnCreate(Bundle bundle)
+		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate(bundle);
+			base.OnCreate (bundle);
 
 			// set layout
-			SetContentView(Resource.Layout.QueryResult);
+			SetContentView (Resource.Layout.QueryResult);
 
 			// find list view
-			queryResultListView = FindViewById<ListView>(Resource.Id.listViewQueryResult);
+			queryResultListView = FindViewById<ListView> (Resource.Id.listViewQueryResult);
 		}
 
-		protected override void OnStart()
+		protected override void OnStart ()
 		{
-			base.OnStart();
+			base.OnStart ();
 
 			// get lot number from intent
-			String lotNumber = Intent.GetStringExtra("LotNumber");
+			String lotNumber = Intent.GetStringExtra ("LotNumber");
 
 			// execute query
-			Route route = RouteManager.queryRouteForLot(lotNumber);
+			Route route = AndroidApp.App.RouteManager.QueryRouteForLot (lotNumber);
 			routeOperations = route.RouteOperations;
 
 			// create list view adapter
-			routeOperationsAdapter = new Adapters.ResultAdapter(this, routeOperations);
+			routeOperationsAdapter = new Adapters.ResultAdapter (this, routeOperations);
 
 			// hook up adapter to list view
 			queryResultListView.Adapter = routeOperationsAdapter;
 		}
 
-		protected override void OnResume()
+		protected override void OnResume ()
 		{
-			base.OnResume();
+			base.OnResume ();
 		}
 	}
 

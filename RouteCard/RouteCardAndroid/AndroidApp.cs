@@ -19,14 +19,17 @@ namespace RouteCardAndroid
 			}
 		}
 
-		public void SetContext(Context ctx)
-		{
-			SimpleStorage.SetContext(ctx);
-		}
-
 		internal AndroidApp ()
 		{
-			Storage = new SimpleStorageAndroid ();
+
+		}
+
+		public void Init (Context ctx)
+		{
+			SimpleStorage.SetContext (ctx);
+			storage = new SimpleStorageAndroid ();
+
+			base.Init ();
 		}
 	}
 }

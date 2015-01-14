@@ -16,66 +16,59 @@ using RouteCard;
 
 namespace RouteCardAndroid.Screens
 {
-	[Activity (Label = "Route Card", Icon="@drawable/icon", Theme="@android:style/Theme.Holo.Light")]			
+	[Activity (Label = "Route Card", Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]			
 	public class LoginScreen : Activity
 	{
 		EditText usernameEditText;
 		EditText passwordEditText;
 		Button loginButton;
 
-		protected override void OnCreate(Bundle bundle)
+		protected override void OnCreate (Bundle bundle)
 		{
-			base.OnCreate(bundle);
+			base.OnCreate (bundle);
 
 			// set layout
-			SetContentView(Resource.Layout.Login);
+			SetContentView (Resource.Layout.Login);
 
 			// find our controls
-			usernameEditText = FindViewById<EditText>(Resource.Id.editTextUsername);
-			passwordEditText = FindViewById<EditText>(Resource.Id.editTextPassword);
-			loginButton = FindViewById<Button>(Resource.Id.buttonLogin);
+			usernameEditText = FindViewById<EditText> (Resource.Id.editTextUsername);
+			passwordEditText = FindViewById<EditText> (Resource.Id.editTextPassword);
+			loginButton = FindViewById<Button> (Resource.Id.buttonLogin);
 
 			// set click handler
-			loginButton.Click += (sender, e) =>
-			{
-				// User credentials
+			loginButton.Click += (sender, e) => {
+				// get user credentials
 				String username = usernameEditText.Text;
 				String password = passwordEditText.Text;
 				bool IsAuthorized = false;
 
 				try {
-					IsAuthorized = AndroidApp.App.GetAccountManager().Authorize(username, password);
+					IsAuthorized = AndroidApp.App.AccountManager.Authenticate (username, password);
 				} catch (AuthorizationException ex) {
-					Toast.MakeText (this, ex.Message, ToastLength.Long).Show();
+					Toast.MakeText (this, ex.Message, ToastLength.Long).Show ();
 					return;
 				}
 
-				// if user is authorized
+				// if user is authenticated
 				if (IsAuthorized) {
-//					// create intent
-//					Intent queryResultIntent = new Intent (this, typeof(QueryScreen));
-//
-//					// start activity
-//					StartActivity (queryResultIntent);
-
-					Finish();
-				}
-				else {
+					// close activity with Ok result
+					SetResult (Result.Ok);
+					Finish ();
+				} else {
 					// show toast
-					Toast.MakeText (this, Resource.String.toast_login_invalid, ToastLength.Long).Show();
+					Toast.MakeText (this, Resource.String.toast_login_invalid, ToastLength.Long).Show ();
 				}
 			};
 		}
 
-		protected override void OnStart()
+		protected override void OnStart ()
 		{
-			base.OnStart();
-
+			base.OnStart ();
 		}
 
-		protected override void OnResume()
+		protected override void OnResume ()
 		{
-			base.OnResume();
+			base.OnResume ();
 		}
 	}
 }

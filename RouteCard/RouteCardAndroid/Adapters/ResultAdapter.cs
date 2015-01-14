@@ -49,20 +49,30 @@ namespace RouteCardAndroid.Adapters
 			view.SetBackgroundColor(Color.ParseColor(item.Color));
 
 			// Find references to each subview in the list item's view
+			TextView typeTextView = view.FindViewById<TextView>(Resource.Id.textViewType);
+			TextView productTypeTextView = view.FindViewById<TextView>(Resource.Id.textViewProductType);
 			TextView facilityTextView = view.FindViewById<TextView>(Resource.Id.textViewFacility);
 			TextView productionLevelTextView = view.FindViewById<TextView>(Resource.Id.textViewProductionLevel);
+			TextView routeTextView = view.FindViewById<TextView>(Resource.Id.textViewRoute);
+			TextView versionTextView = view.FindViewById<TextView>(Resource.Id.textViewVersion);
+			TextView positionTextView = view.FindViewById<TextView>(Resource.Id.textViewPosition);
 			TextView operationTextView = view.FindViewById<TextView>(Resource.Id.textViewOperation);
-			TextView arrivalDateTextView = view.FindViewById<TextView>(Resource.Id.textViewArrivalDate);
-			TextView arrivalTimeTextView = view.FindViewById<TextView>(Resource.Id.textViewArrivalTime);
-			TextView processingTimeTextView = view.FindViewById<TextView>(Resource.Id.textViewProcessingTime);
+			TextView cTPlanTextView = view.FindViewById<TextView>(Resource.Id.textViewCTPlan);
+			TextView cTQTextView = view.FindViewById<TextView>(Resource.Id.textViewCTQ);
+			TextView rPTTextView = view.FindViewById<TextView>(Resource.Id.textViewRPT);
 
 			// Assign item's values to the various subviews
+			typeTextView.SetText(item.Type, TextView.BufferType.Normal);
+			productTypeTextView.SetText(item.ProductType, TextView.BufferType.Normal);
 			facilityTextView.SetText(item.Facility, TextView.BufferType.Normal);
 			productionLevelTextView.SetText(item.ProductionLevel, TextView.BufferType.Normal);
+			routeTextView.SetText(item.Route.ToString(), TextView.BufferType.Normal);
+			versionTextView.SetText(item.Version.ToString(), TextView.BufferType.Normal);
+			positionTextView.SetText(item.Position.ToString(), TextView.BufferType.Normal);
 			operationTextView.SetText(item.OperationNumber.ToString(), TextView.BufferType.Normal);
-			arrivalDateTextView.SetText(item.ArrivalDate, TextView.BufferType.Normal);
-			arrivalTimeTextView.SetText(item.ArrivalTime, TextView.BufferType.Normal);
-			processingTimeTextView.SetText(item.ProcessingTime, TextView.BufferType.Normal);
+			cTPlanTextView.SetText(item.CTPlan, TextView.BufferType.Normal);
+			cTQTextView.SetText(item.CTQ, TextView.BufferType.Normal);
+			rPTTextView.SetText(item.RPT, TextView.BufferType.Normal);
 
 			//Finally return the view
 			return view;

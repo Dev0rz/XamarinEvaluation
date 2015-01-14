@@ -5,38 +5,14 @@ namespace RouteCard
 {
 	public class AccountManager
 	{
-		BasicHttpBinding binding = new BasicHttpBinding();
-		EndpointAddress addr = new EndpointAddress(@"http://46.163.111.88/MockService.svc");
+		BasicHttpBinding binding = new BasicHttpBinding ();
+		EndpointAddress addr = new EndpointAddress (@"http://46.163.111.88/MockService.svc");
 
 		ISimpleStorage storage = null;
 
 		public AccountManager (ISimpleStorage storage)
 		{
 			this.storage = storage;
-		}
-
-		private User GetCredentials()
-		{
-			User u = new User ();
-			u.UserName = storage.GetString ("user");
-			u.Password = storage.GetString ("pass");
-
-			if (u.UserName == String.Empty || u.Password == String.Empty) {
-				return null;
-			} else {
-				return u;
-			}
-		}
-
-		private void StoreCredentials(String userName, String password)
-		{
-			storage.PutString ("user", userName);
-			storage.PutString ("pass", password);
-		}
-
-		public void ClearCredentials() {
-			storage.PutString ("user", "");
-			storage.PutString ("pass", "");
 		}
 			
 		public bool AutoAuthenticate()
@@ -60,11 +36,11 @@ namespace RouteCard
 			return false;
 		}
 
-		private bool _Authenticate (String username, String password)
+		protected bool _Authenticate (String username, String password)
 		{
 			try {
 				MockServiceClient client = new MockServiceClient (binding, addr);
-				return client.IsValidUser(username, password);
+				return client.IsValidUser (username, password);
 			}
 			catch (EndpointNotFoundException) {
 				throw new AuthorizationException ("Server not found.");
@@ -78,6 +54,31 @@ namespace RouteCard
 			catch (Exception) {
 				throw new AuthorizationException ("Undefined error occured.");
 			}
+		}
+
+		private User GetCredentials ()
+		{
+			User u = new User ();
+			u.UserName = storage.GetString ("user");
+			u.Password = storage.GetString ("pass");
+
+			if (u.UserName == String.Empty || u.Password == String.Empty) {
+				return null;
+			} else {
+				return u;
+			}
+		}
+
+		private void StoreCredentials (String userName, String password)
+		{
+			storage.PutString ("user", userName);
+			storage.PutString ("pass", password);
+		}
+
+		public void ClearCredentials ()
+		{
+			storage.PutString ("user", "");
+			storage.PutString ("pass", "");
 		}
 	}
 }

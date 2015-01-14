@@ -8,6 +8,13 @@
     android:paddingTop="@dimen/phone_padding"
     android:paddingBottom="@dimen/phone_padding">
     <TextView
+        android:id="@+id/textViewType"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="F0000X"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
         android:id="@+id/textViewFacility"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -22,28 +29,28 @@
         android:text="FOL"
         android:textSize="@dimen/phone_text_size_list_item" />
     <TextView
+        android:id="@+id/textViewRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="V0000X"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
+        android:id="@+id/textViewPosition"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/phone_padding"
+        android:text="01"
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
         android:id="@+id/textViewOperation"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingRight="@dimen/phone_padding"
-        android:text="0000"
+        android:text="1234"
         android:textSize="@dimen/phone_text_size_list_item" />
     <TextView
-        android:id="@+id/textViewArrivalDate"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingRight="@dimen/phone_padding"
-        android:text="00.00.0000"
-        android:textSize="@dimen/phone_text_size_list_item" />
-    <TextView
-        android:id="@+id/textViewArrivalTime"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:paddingRight="@dimen/phone_padding"
-        android:text="00:00"
-        android:textSize="@dimen/phone_text_size_list_item" />
-    <TextView
-        android:id="@+id/textViewProcessingTime"
+        android:id="@+id/textViewCTPlan"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:paddingRight="@dimen/phone_padding"

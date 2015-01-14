@@ -3,38 +3,30 @@ using RouteCard.Core;
 
 namespace RouteCard
 {
-	public abstract class Application : Application
+	public abstract class Application
 	{
 		protected ISimpleStorage storage = null;
-		protected AccountManager AccountMgr = null;
-		protected RouteManager RouteMgr = null;
-
 		public ISimpleStorage Storage
 		{
 			get { return storage; }
-			set { storage = value; }
 		}
 
-		public AccountManager GetAccountManager()
+		protected AccountManager accountManager = null;
+		public AccountManager AccountManager
 		{
-			if (storage == null) {
-				return null;
-			}
-
-			if (AccountMgr == null) {
-				AccountMgr = new AccountManager (storage);
-			}
-
-			return AccountMgr;
+			get { return accountManager; }
 		}
 
-		public RouteManager GetRouteManager()
+		protected RouteManager routeManager = null;
+		public RouteManager RouteManager
 		{
-			if (RouteMgr == null) {
-				RouteMgr = new RouteManager ();
-			}
+			get { return routeManager; }
+		}
 
-			return RouteMgr;
+		public void Init ()
+		{
+			accountManager = new AccountManagerLocal (storage);
+			routeManager = new RouteManagerLocal ();
 		}
 	}
 }

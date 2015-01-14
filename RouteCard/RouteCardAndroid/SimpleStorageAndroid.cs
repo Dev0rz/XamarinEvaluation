@@ -8,6 +8,7 @@ namespace RouteCardAndroid
 	{
 		public SimpleStorageAndroid ()
 		{
+
 		}
 
 		#region ISimpleStorage implementation
@@ -25,7 +26,6 @@ namespace RouteCardAndroid
 		}
 
 		#endregion
-
 	}
 }
 
