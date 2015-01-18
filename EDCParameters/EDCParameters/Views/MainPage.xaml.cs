@@ -13,7 +13,15 @@ namespace EDCParameters
 		{
 			InitializeComponent ();
 
-			Navigation.PushModalAsync (new LoginPage (app.AccountManager));
+			// try to auto authenticate
+			try {
+				if (!app.AccountManager.AutoAuthenticate()) {
+					Navigation.PushModalAsync (new LoginPage (app.AccountManager));
+				}
+			} catch (Exception ex) {
+				// TODO Change to dialog
+				Navigation.PushModalAsync (new LoginPage (app.AccountManager));
+			}
 		}
 
 		void OnButtonClicked(object sender, EventArgs args)
