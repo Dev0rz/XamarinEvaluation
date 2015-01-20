@@ -20,6 +20,7 @@ namespace RouteCardAndroid.Screens
 	{
 		static readonly int LOGIN_REQUEST = 1;
 
+		Button scanButton;
 		EditText lotNumberEditText;
 		Button searchButton;
 
@@ -38,11 +39,22 @@ namespace RouteCardAndroid.Screens
 			// set layout
 			SetContentView (Resource.Layout.Query);
 
-			// find our controls
-			lotNumberEditText = FindViewById<EditText> (Resource.Id.editTextLotNumber);
+			// find scan controls
+			scanButton = FindViewById<Button> (Resource.Id.buttonScan);
+
+			// set scan button click handler
+			scanButton.Click += (sender, e) => {
+				// create intent
+				Intent scanIntent = new Intent (this, typeof(ScanScreen));
+				// start activity
+				StartActivity (scanIntent);
+			};
+
+			// find search controls
+			lotNumberEditText = FindViewById<EditText> (Resource.Id.editTextSearchLotNumber);
 			searchButton = FindViewById<Button> (Resource.Id.buttonSearch);
 
-			// set click handler
+			// set search button click handler
 			searchButton.Click += (sender, e) => {
 				// search lot
 				String lotNumber = lotNumberEditText.Text;

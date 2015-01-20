@@ -67,8 +67,8 @@ namespace RouteCard.Core
 				CTPlan = "00:10",
 				CTQ = "00:02",
 				RPT = "00:08",
-				Color = "#FFFFFF"
-			} );
+				Color = "#909090"
+			});
 			r1.addOperation (new RouteOperation () {
 				Type = "F4133T",
 				ProductType = "F4133T00100",
@@ -84,7 +84,7 @@ namespace RouteCard.Core
 				CTPlan = "00:20",
 				CTQ = "00:06",
 				RPT = "00:14",
-				Color = "#FFFFFF"
+				Color = "#909090"
 			});
 			routes.Add (r1);
 
@@ -138,7 +138,7 @@ namespace RouteCard.Core
 				CTPlan = "00:14",
 				CTQ = "00:06",
 				RPT = "00:08",
-				Color = "#FFFFFF"
+				Color = "#909090"
 			});
 			r2.addOperation (new RouteOperation () {
 				Type = "F4135T",
@@ -155,7 +155,7 @@ namespace RouteCard.Core
 				CTPlan = "00:20",
 				CTQ = "00:06",
 				RPT = "00:14",
-				Color = "#FFFFFF"
+				Color = "#909090"
 			});
 			r2.addOperation (new RouteOperation () {
 				Type = "F4135T",
@@ -172,12 +172,12 @@ namespace RouteCard.Core
 				CTPlan = "00:18",
 				CTQ = "00:06",
 				RPT = "00:12",
-				Color = "#FFFFFF"
+				Color = "#909090"
 			});
 			routes.Add (r2);
 		}
 
-		virtual public Route QueryRouteForLot (string lotNumber)
+		public override Route QueryRouteForLot (string lotNumber)
 		{
 			foreach (Route r in routes) {
 				if (r.Lot.Equals(lotNumber)) {

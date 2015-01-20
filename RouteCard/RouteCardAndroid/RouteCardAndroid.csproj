@@ -46,6 +46,9 @@
     <Reference Include="SimpleStorage.Droid">
       <HintPath>..\Bin\SimpleStorage.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="ScanditSDK">
+      <HintPath>..\Bin\ScanditSDK.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -57,6 +60,7 @@
     <Compile Include="Screens\LoginScreen.cs" />
     <Compile Include="AndroidApp.cs" />
     <Compile Include="SimpleStorageAndroid.cs" />
+    <Compile Include="Screens\ScanScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -77,6 +81,11 @@
     <AndroidResource Include="Resources\layout-xlarge-port\QueryResultItem.axml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
     <AndroidResource Include="Resources\menu\query_menu.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\layout-xlarge-port\QueryResultDetails.axml" />
+    <AndroidResource Include="Resources\layout-xlarge-land\QueryResultDetails.axml" />
+    <AndroidResource Include="Resources\layout-normal-land\QueryResultDetails.axml" />
+    <AndroidResource Include="Resources\layout-normal-port\QueryResultDetails.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

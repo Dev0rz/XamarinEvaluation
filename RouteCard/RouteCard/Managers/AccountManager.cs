@@ -36,7 +36,7 @@ namespace RouteCard
 			return false;
 		}
 
-		protected bool _Authenticate (String username, String password)
+		protected virtual bool _Authenticate (String username, String password)
 		{
 			try {
 				MockServiceClient client = new MockServiceClient (binding, addr);

@@ -3,20 +3,24 @@
 	<string name="app_name">Route Card</string>
 
 	<!-- strings used in query screen activity -->
-	<string name="label_lot_number">Lot Number:</string>
+	<string name="label_scan_lot_number">Scan Lot Number:</string>
+	<string name="label_enter_lot_number">Enter Lot Number:</string>
 	<string name="content_lot_number">e.g. B124506R</string>
+	<string name="label_scan_button">Scan</string>
 	<string name="label_search_button">Search</string>
 	<string name="toast_lot_not_found">Lot was not found!</string>
+
+	<!-- strings used in action bar -->
 	<string name="menu_item_label_log_off_user">Log Off User</string>
 	<string name="menu_item_label_change_user">Change User</string>
 	<string name="menu_item_label_about">About</string>
 
 	<!-- strings used in login screen activity -->
-	<string name="title_login_screen">Osram OS Route Card</string>
+	<string name="title_login_screen">Osram OS</string>
+	<string name="subtitle_login_screen">Route Card Viewer</string>
 	<string name="content_username">Insert User Name</string>
 	<string name="content_password">Insert Password</string>
 	<string name="label_login_button">Login</string>
 	<string name="toast_login_invalid">Invalid username or password!</string>
 	<string name="toast_login_error">Client server communication failed!</string>
-
 </resources>

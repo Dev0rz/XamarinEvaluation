@@ -8,6 +8,14 @@
     android:paddingTop="@dimen/tablet_padding"
     android:paddingBottom="@dimen/tablet_padding">
     <TextView
+        android:id="@+id/textViewColor"
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:layout_marginRight="@dimen/phone_padding"
+        android:background="@color/grey"
+        android:text=""
+        android:textSize="@dimen/phone_text_size_list_item" />
+    <TextView
         android:id="@+id/textViewProductType"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

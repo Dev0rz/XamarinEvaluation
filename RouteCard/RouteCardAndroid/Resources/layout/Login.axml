@@ -12,9 +12,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/phone_padding_title"
-        android:layout_marginBottom="@dimen/phone_padding_title"
         android:text="@string/title_login_screen"
         android:textSize="@dimen/phone_text_size_title"
+        android:textColor="@color/osram"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/textViewSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/phone_padding_title"
+        android:text="@string/subtitle_login_screen"
+        android:textSize="@dimen/phone_text_size_subtitle"
         android:gravity="center" />
     <EditText
         android:id="@+id/editTextUsername"

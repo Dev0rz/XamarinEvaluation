@@ -21,7 +21,7 @@ namespace RouteCard
 			users.Add (new User () { UserName = "philip", Password = "123" });
 		}
 
-		virtual protected bool _Authenticate (String username, String password)
+		protected override bool _Authenticate (String username, String password)
 		{
 			foreach (User u in users) {
 				if (username.Equals (u.UserName) && password.Equals (u.Password)) {

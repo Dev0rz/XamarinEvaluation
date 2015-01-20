@@ -3,10 +3,10 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:paddingLeft="@dimen/phone_padding"
-    android:paddingRight="@dimen/phone_padding"
-    android:paddingTop="@dimen/phone_padding"
-    android:paddingBottom="@dimen/phone_padding">
+    android:paddingLeft="@dimen/tablet_padding"
+    android:paddingRight="@dimen/tablet_padding"
+    android:paddingTop="@dimen/tablet_padding"
+    android:paddingBottom="@dimen/tablet_padding">
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="fill_parent"
@@ -24,12 +24,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Basic Type:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewTypeValue"
                     android:layout_column="1"
                     android:text="F1234X"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -37,12 +37,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Product Type:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewProductTypeValue"
                     android:layout_column="1"
                     android:text="F1234X12345"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -50,12 +50,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Product:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewProductValue"
                     android:layout_column="1"
                     android:text="11000000"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -63,12 +63,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Plant:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewPlantValue"
                     android:layout_column="1"
                     android:text="BUR"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -76,12 +76,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Facility:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewFacilityValue"
                     android:layout_column="1"
                     android:text="OSFE1"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -89,12 +89,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Production Level:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewProductionLevelValue"
                     android:layout_column="1"
                     android:text="FOL"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -102,12 +102,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Route:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewRouteValue"
                     android:layout_column="1"
                     android:text="V1234X"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -115,12 +115,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Version:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewVersionValue"
                     android:layout_column="1"
                     android:text="11"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -128,12 +128,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Position:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewPositionValue"
                     android:layout_column="1"
                     android:text="11"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -141,12 +141,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Operation:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewOperationNumberValue"
                     android:layout_column="1"
                     android:text="1234"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -154,12 +154,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Operation Text:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewOperationTextValue"
                     android:layout_column="1"
                     android:text="Start FOL"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -167,12 +167,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="CT Plan:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewCTPlanValue"
                     android:layout_column="1"
                     android:text="00:30"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -180,12 +180,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="CT Queue:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewCTQValue"
                     android:layout_column="1"
                     android:text="00:30"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
             <TableRow>
                 <TextView
@@ -193,12 +193,12 @@
                     android:layout_column="0"
                     android:paddingRight="10dp"
                     android:text="Raw Process Time:"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
                 <TextView
                     android:id="@+id/textViewRPTValue"
                     android:layout_column="1"
                     android:text="00:30"
-                    android:textSize="@dimen/phone_text_size_list_item" />
+                    android:textSize="@dimen/tablet_text_size_list_item" />
             </TableRow>
         </TableLayout>
     </ScrollView>

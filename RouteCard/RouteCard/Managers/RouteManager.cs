@@ -14,7 +14,7 @@ namespace RouteCard.Core
 		
 		}
 
-		public Route QueryRouteForLot (string lotNumber)
+		public virtual Route QueryRouteForLot (string lotNumber)
 		{
 			Route r = new Route (lotNumber);
 

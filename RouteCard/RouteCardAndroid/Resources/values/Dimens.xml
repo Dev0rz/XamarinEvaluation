@@ -4,7 +4,8 @@
 	<dimen name="phone_padding_title">20dp</dimen>
 	<dimen name="phone_padding_button">20dp</dimen>
 
-    <dimen name="phone_text_size_title">24dp</dimen>
+    <dimen name="phone_text_size_title">30dp</dimen>
+    <dimen name="phone_text_size_subtitle">22dp</dimen>
     <dimen name="phone_text_size_label">18dp</dimen>
     <dimen name="phone_text_size_widget">18dp</dimen>
     <dimen name="phone_text_size_list_item">12dp</dimen>
@@ -13,10 +14,10 @@
 	<dimen name="tablet_padding_title">40dp</dimen>
 	<dimen name="tablet_padding_button">40dp</dimen>
 
-    <dimen name="tablet_text_size_title">32dp</dimen>
+    <dimen name="tablet_text_size_title">38dp</dimen>
+    <dimen name="tablet_text_size_subtitle">30dp</dimen>
     <dimen name="tablet_text_size_label">26dp</dimen>
     <dimen name="tablet_text_size_widget">26dp</dimen>
     <dimen name="tablet_text_size_list_item">20dp</dimen>
-
 </resources>
 
