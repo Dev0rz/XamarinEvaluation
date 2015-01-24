@@ -4,6 +4,8 @@
     <Grid.RowDefinitions>
       <RowDefinition Height="100" />
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="30" />
+      <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
@@ -14,14 +16,16 @@
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
 
-    <Label Text="Username" Grid.Row="1" Grid.Column="0" />
-	<Entry x:Name="UsernameEntry" HorizontalOptions="Fill" Grid.Row="2" Grid.Column="0" />
-	<Label Text="Password" Grid.Row="3" Grid.Column="0" />
-	<Entry x:Name="PasswordEntry" HorizontalOptions="Fill" Grid.Row="4" Grid.Column="0" />
+    <Label Text="Log in" HorizontalOptions="Center" FontSize="Medium" Grid.Row="1" Grid.Column="0" TextColor="#909090"/>
+
+    <Label Text="Username" Grid.Row="3" Grid.Column="0" />
+	<Entry x:Name="UsernameEntry" HorizontalOptions="Fill" Grid.Row="4" Grid.Column="0" />
+	<Label Text="Password" Grid.Row="5" Grid.Column="0" />
+	<Entry x:Name="PasswordEntry" HorizontalOptions="Fill" Grid.Row="6" Grid.Column="0" />
 
     <Button Text="Login"
             Clicked="OnButtonClicked"
-            Grid.Row="5" Grid.Column="0" />
+            Grid.Row="7" Grid.Column="0" />
   
   </Grid>
 </ContentPage>

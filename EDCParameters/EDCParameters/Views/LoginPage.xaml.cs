@@ -38,9 +38,6 @@ namespace EDCParameters
 		protected override bool OnBackButtonPressed()
 		{
 			return !IsAuthenticated;
-//			if (!IsAuthenticated) 
-//				return ;
-//			base.OnBackButtonPressed ();
 		}
 	}
 }

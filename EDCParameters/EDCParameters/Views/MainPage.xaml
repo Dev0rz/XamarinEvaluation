@@ -3,7 +3,11 @@
  	
   <Grid>
     <Grid.RowDefinitions>
-      <RowDefinition Height="100" />
+      <RowDefinition Height="10" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="30" />
+      <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
     </Grid.RowDefinitions>
@@ -12,11 +16,15 @@
       <ColumnDefinition Width="*" />
     </Grid.ColumnDefinitions>
 
-	<Entry x:Name="RouteCardEntry" HorizontalOptions="Fill" Grid.Row="1" Grid.Column="0" />
+    <Label Text="Osram OS" HorizontalOptions="Center" FontSize="Large" Grid.Row="1" Grid.Column="0" TextColor="#FF7F27"/>
+    <Label Text="EDC Parameter Viewer" HorizontalOptions="Center" FontSize="Medium" Grid.Row="2" Grid.Column="0" TextColor="#909090"/>
+
+    <Label Text="Enter Id:" FontSize="Medium" Grid.Row="4" Grid.Column="0" TextColor="#909090"/>
+	<Entry x:Name="RouteCardEntry" HorizontalOptions="Fill" Grid.Row="5" Grid.Column="0" />
 
     <Button Text="Search"
             Clicked="OnButtonClicked"
-            Grid.Row="2" Grid.Column="0" />
+            Grid.Row="6" Grid.Column="0" />
   
   </Grid>
 

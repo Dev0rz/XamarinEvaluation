@@ -10,7 +10,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace EDCParametersAndroid
 {
-	[Activity (Label = "EDCParametersAndroid", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "EDC Parameters", MainLauncher = true, Icon = "@drawable/icon", Theme = "@android:style/Theme.Holo.Light")]			
 	public class MainActivity : FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
