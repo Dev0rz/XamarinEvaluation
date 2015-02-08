@@ -27,7 +27,13 @@ namespace EDCParameters
 		void OnButtonClicked(object sender, EventArgs args)
 		{
 			Entry e = this.Content.FindByName<Entry> ("RouteCardEntry");
-			Navigation.PushModalAsync (new DetailPage ());
+
+			MockClient client = new MockClient ();
+
+			if(!client.EDCParameterExists(e.Text))
+				DisplayAlert ("Error", "Routecard not found.", "OK");
+			else
+				Navigation.PushModalAsync (new DetailPage (e.Text));
 		}
 	}
 }

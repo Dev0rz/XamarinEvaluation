@@ -1,8 +1,8 @@
-﻿<Properties StartupItem="EDCParametersAndroid\EDCParametersAndroid.csproj">
+﻿<Properties StartupItem="EDCParametersAndroid\EDCParametersAndroid.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android_5.0" />
   <MonoDevelop.Ide.Workbench ActiveDocument="EDCParameters\Views\DetailPage.xaml.cs">
     <Files>
-      <File FileName="EDCParametersAndroid\MainActivity.cs" Line="2" Column="2" />
+      <File FileName="EDCParametersAndroid\MainActivity.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Application.xaml" Line="1" Column="1" />
       <File FileName="EDCParameters\Application.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Managers\AccountManager.cs" Line="1" Column="1" />
@@ -10,16 +10,16 @@
       <File FileName="EDCParameters\Entities\User.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Managers\EDCManager.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Interfaces\ISimpleStorage.cs" Line="1" Column="1" />
-      <File FileName="EDCParameters\Views\MainPage.xaml" Line="35" Column="35" />
+      <File FileName="EDCParameters\Views\MainPage.xaml" Line="1" Column="1" />
       <File FileName="EDCParameters\Views\MainPage.xaml.cs" Line="1" Column="1" />
       <File FileName="EDCParametersAndroid\AndroidApp.cs" Line="1" Column="1" />
       <File FileName="EDCParametersAndroid\SimpleStorageAndroid.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Entities\EDCParameter.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Entities\KeyValuePair.cs" Line="1" Column="1" />
-      <File FileName="EDCParameters\Views\LoginPage.xaml" Line="24" Column="24" />
-      <File FileName="EDCParameters\Views\LoginPage.xaml.cs" Line="40" Column="40" />
-      <File FileName="EDCParameters\Views\DetailPage.xaml" Line="19" Column="19" />
-      <File FileName="EDCParameters\Views\DetailPage.xaml.cs" Line="184" Column="184" />
+      <File FileName="EDCParameters\Views\LoginPage.xaml" Line="1" Column="1" />
+      <File FileName="EDCParameters\Views\LoginPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="EDCParameters\Views\DetailPage.xaml" Line="1" Column="1" />
+      <File FileName="EDCParameters\Views\DetailPage.xaml.cs" Line="1" Column="1" />
       <File FileName="c:\Users\phili_000\Documents\Projects\Dev0rz\XamarinEvaluation\EDCParameters\EDCParameters\obj\Debug\MainPage.xaml.g.cs" Line="1" Column="1" />
       <File FileName="EDCParameters\Views\EntryPage.xaml" Line="1" Column="1" />
       <File FileName="EDCParameters\Views\EntryPage.xaml.cs" Line="1" Column="1" />

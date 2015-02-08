@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="EDCParametersAndroid.EDCParametersAndroid">
-  <uses-sdk android:minSdkVersion="21" />
+  <uses-sdk android:minSdkVersion="15" />
   <application android:label="EDCParametersAndroid" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="EDC Parameters" android:theme="@android:style/Theme.Holo.Light" android:name="edcparametersandroid.MainActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="EDCParametersAndroid.EDCParametersAndroid.mono.MonoRuntimeProvider.__mono_init__" />

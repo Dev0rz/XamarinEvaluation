@@ -5,8 +5,8 @@ namespace EDCParameters
 {
 	public class AccountManager
 	{
-		BasicHttpBinding binding = new BasicHttpBinding();
-		EndpointAddress addr = new EndpointAddress(@"http://46.163.111.88/MockService.svc");
+//		BasicHttpBinding binding = new BasicHttpBinding();
+//		EndpointAddress addr = new EndpointAddress(@"http://46.163.111.88/MockService.svc");
 
 		ISimpleStorage storage = null;
 
@@ -63,7 +63,7 @@ namespace EDCParameters
 		private bool _Authenticate (String username, String password)
 		{
 			try {
-				MockServiceClient client = new MockServiceClient (binding, addr);
+				MockClient client = new MockClient ();
 				return client.IsValidUser(username, password);
 			}
 			catch (EndpointNotFoundException) {

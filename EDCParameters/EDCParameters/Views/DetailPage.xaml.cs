@@ -31,24 +31,95 @@ namespace EDCParameters
 		}
 	}
 
+	public class ParameterView
+	{
+		public Label Name;
+		public List<Entry> Entries;
+
+		public ParameterView(string name)
+		{
+			Name = new Label() { Text = name};
+			Entries = new List<Entry> ();
+		}
+	}
+
 	public partial class DetailPage : ContentPage
 	{	
-		public DetailPage ()
+		String routeCard = String.Empty;
+		Button button = null;
+		List<ParameterView> paramView = new List<ParameterView>();
+
+		void OnButtonClicked(object sender, EventArgs e)
 		{
-			var listView = new ListView ();
+			bool Error = false;
+			foreach (var item in paramView) {
+				foreach (var item2 in item.Entries) {
+					if (item2.Text == String.Empty) {
+						Error = true;
+					}
+				}
+			}
 
-			// TODO: Call service and bind source
-			listView.ItemsSource = new [] { "a", "b", "c" };
-			listView.ItemTemplate = new DataTemplate(typeof(ListViewCell));
+			if(Error)
+				DisplayAlert ("Error", "Please enter all fields.", "OK");
 
-			Label label = new Label { Text = "EDC Parameters", TextColor = Color.FromRgb (144, 144, 144), Font = Font.SystemFontOfSize(NamedSize.Medium), HorizontalOptions=LayoutOptions.Center };
+			MockClient client = new MockClient ();
+			List<EDCParameter> list = new List<EDCParameter> ();
 
-			Content = new StackLayout {
-				Orientation = StackOrientation.Vertical,
-				VerticalOptions = LayoutOptions.StartAndExpand,
-				Padding = new Thickness (15, 5, 5, 5),
-				Children = {label, listView}
+			foreach (var item in paramView) {
+				EDCParameter param = new EDCParameter ();
+				param.Parameters = new List<string> ();
+				foreach (var item2 in item.Entries) {
+					param.Parameters.Add (item2.Text);
+				}
+				list.Add (param);
+			}
+
+			if (client.ValidateEDCParameter (routeCard, list))
+				DisplayAlert ("Success", "The parameters are valid.", "OK");
+			else
+				DisplayAlert ("Failed", "The parameters are not valid.", "OK");
+		}
+
+
+		public DetailPage (String RouteCard)
+		{
+			routeCard = RouteCard;
+
+			button = new Button
+			{
+				Text = "Check",
 			};
+
+			StackLayout stack = new StackLayout();
+			var view = new ScrollView {
+				Content = stack,
+			};
+			stack.Padding = new Thickness (20);
+
+
+			MockClient client = new MockClient ();
+			List<EDCParameter> list = client.GetEDCParameter (RouteCard);
+
+			foreach (var item in list) {
+				ParameterView pView = new ParameterView(item.Name);
+				for (int i = 0; i < item.NumberOfParameters; i++) {
+					pView.Entries.Add (new Entry () { Text = "" });
+				}
+				paramView.Add (pView);
+			}
+
+			foreach (var item in paramView) {
+				stack.Children.Add (item.Name);
+				foreach (var entry in item.Entries) {
+					stack.Children.Add (entry);
+				}
+			}
+
+			stack.Children.Add (button);
+			button.Clicked += OnButtonClicked;
+
+			Content = view;
 		}
 	}
 }
